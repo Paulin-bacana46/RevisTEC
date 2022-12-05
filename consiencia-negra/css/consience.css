@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+  }
+  
+  body{
+    background-color: #0a2a43;
+  }
+  body header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: #23232e;
+    height: 8vh;
+  }
+  body header nav .logo {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+    opacity: 0.7;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  body header nav .logo span {
+    color: red;
+  }
+  body header nav .mobile-menu {
+    display: none;
+    cursor: pointer;
+  }
+  body header nav .mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+  }
+  body header nav .nav-list {
+    list-style: none;
+    align-items: center;
+    display: flex;
+    margin-bottom: 0;
+  }
+  body header nav .nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+    transition: 0.4s;
+  }
+  body header nav .nav-list li a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+    opacity: 0.7;
+  }
+  body header nav .nav-list li:hover {
+    transform: scale(1.1);
+  }
+  @media screen and (max-width: 999px) {
+    body header nav .mobile-menu {
+      display: block;
+    }
+    @-webkit-keyframes navLinkFade {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @keyframes navLinkFade {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @-webkit-keyframes animateLine1 {
+      0% {
+        transform: translate(0, 0) rotate(0);
+      }
+      100% {
+        transform: rotate(-45deg) translate(-8px, 8px);
+      }
+    }
+    @keyframes animateLine1 {
+      0% {
+        transform: translate(0, 0) rotate(0);
+      }
+      100% {
+        transform: rotate(-45deg) translate(-8px, 8px);
+      }
+    }
+    @-webkit-keyframes animateLine3 {
+      0% {
+        transform: translate(0, 0) rotate(0);
+      }
+      100% {
+        transform: rotate(45deg) translate(-5px, -7px);
+      }
+    }
+    @keyframes animateLine3 {
+      0% {
+        transform: translate(0, 0) rotate(0);
+      }
+      100% {
+        transform: rotate(45deg) translate(-5px, -7px);
+      }
+    }
+    body header nav .mobile-menu .line1 {
+      transition: 0.5s;
+    }
+    body header nav .mobile-menu .line2 {
+      transition: 0.5s;
+    }
+    body header nav .mobile-menu .line3 {
+      transition: 0.5s;
+    }
+    body header nav .mobile-menu.active .line1 {
+      -webkit-animation: animateLine1 0.5s forwards;
+              animation: animateLine1 0.5s forwards;
+    }
+    body header nav .mobile-menu.active .line2 {
+      opacity: 0;
+    }
+    body header nav .mobile-menu.active .line3 {
+      -webkit-animation: animateLine3 0.5s forwards;
+              animation: animateLine3 0.5s forwards;
+    }
+    body header .nav-list {
+      position: absolute;
+      top: 8vh;
+      right: 0;
+      width: 50vw;
+      height: 92vh;
+      background: rgba(35, 35, 46, 0.8980392157);
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      transform: translateX(100%);
+      transition: 0.5s;
+      z-index: 19;
+    }
+    body header .nav-list li {
+      margin-left: 0;
+      opacity: 1;
+    }
+    body header .nav-list.active {
+      transform: translateX(0);
+      z-index: 20;
+    }
+  }
+  
+  main {
+    position: relative;
+  }
+  main .container {
+    height: 70vh;
+    width: 100%;
+  }
+
+  #divText1{
+    margin-top: 7.5vh;
+  }
+  main .container .subContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+  }
+  main .container .subContent .util {
+    width: 95%;
+    height: 50vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.089);
+  }
+
+  main .container .subContent .util2 {
+    width: 95%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.089);
+  }
+
+  #util1{
+    box-shadow: 0px 0px 10px 0.01vh #868686;
+  }
+
+  main .container .subContent .util .imgBox {
+    height: 50vh;
+    width: 35vw;
+    background: rgb(170, 170, 170);
+
+  }
+
+  main .container .subContent .util .imgBox-2 {
+    height: 45vh;
+    width: 30vw;
+    background: rgb(170, 170, 170);
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 0px;
+
+  }
+
+  main .container .subContent .util2 .imgBox-2 {
+    height: 45vh;
+    width: 30vw;
+    background: rgb(170, 170, 170);
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 0px;
+
+  }
+
+  main .container .subContent .util .imgBox img {
+    width: 100%;
+    height: 100%;
+  }
+
+  main .container .subContent .util .imgBox-2 img {
+    width: 100%;
+    height: 100%;
+  }
+
+  main .container .subContent .util2 .imgBox-2 img {
+    width: 100%;
+    height: 100%;
+  }
+
+  main .container .subContent .util .textBox {
+    width: 50vw;
+    padding: 15px;
+  
+    font-size: 20px;
+  }
+  main .container .subContent .util .textBox p {
+    color: #fff;
+  }
+  
+  main .container .subContent .util .textBox .p1 {
+    margin-bottom: 20px;
+  }
+  
+  main .container .subContent .util .textBox .p2 {
+    margin-top: 20px;
+  }
+  
+  main .container .subContent .util-R {
+    flex-direction: row-reverse;
+  }
+  main .container1 {
+    background: #0a2a43;
+    z-index: 1;
+    
+  }
+  main .container1 #util1 {
+    z-index: 2;
+  }
+
+  img{
+    border: 3px solid black;
+  }
+  video{
+    border: 3px solid black;
+  }
+ /* main .container2 {
+    background: url(../img/bg.jpg) center/cover;
+    z-index: 3;
+  }
+  main .container2 .util2 {
+    z-index: 4;
+  }
+  main .container3 {
+    background: #0f3e62;
+    z-index: 5;
+  }
+  main .container3 .util3 {
+    z-index: 6;
+  }
+  main .container4 {
+    background: url(../img/fundo2.jpg) center/cover;
+    z-index: 7;
+  }
+  main .container4 .util4 {
+    z-index: 8;
+  }
+  main .container5 {
+    background: #196199;
+    z-index: 9;
+  }
+  main .container5 .util5 {
+    z-index: 10;
+  }# sourceMappingURL=second.css.map */

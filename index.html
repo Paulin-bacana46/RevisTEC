@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="principal/css/style.css">    
+    <title>RevisTEC</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+          <a class="logo" href="index.html">Revis<span>TEC</span></a>
+          <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+          <ul class="nav-list">
+            <li><a href="#introduction">Sobre</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+    </header>
+      
+    <main>
+      <section class="section1">
+        <img src="principal/arquivosUteis/bg.jpg" id="bg">
+        <img src="principal/arquivosUteis/moon.png" id="moon">
+        <img src="principal/arquivosUteis/mountain.png" id="mountain">
+        <img src="principal/arquivosUteis//road.png" id="road">
+        <h2 id="textH2">Revista<span id="spanRed">ETEC</span></h2>
+      </section>
+
+      <section class="section2">
+        <div id="introduction">
+          <div class="textBox">
+            <p>RevisTEC é uma revista digital desenvolvido pelo 2°B - Kali. A revista reúne os trabalhos de todas as séries do curso de TI. Temos materiais desde o primeiro ao terceiro ano.
+              A RevisTEC foi um trabalho solicitado pela professora Luzia de língua portuguesa e literatura. A sua criação teve o intuito de divulgar os trabalhos do TI, para que não sejam apenas "feitos", e sim, divulgados para que todos apreciem.
+              Enfim, deixaremos a sua curiosidade fluir através destas memórias aqui reunidas.</p>
+          </div>
+        </div>
+        <div id="projetos" class="content">
+          <div class="card" >
+            <div class="top" >
+              <h2>Primeiro Ti</h2>
+            </div>
+            <a href="first.html"><div class="center1"></div></a>
+            <div class="bottom">
+              <p><a id="first" href="first.html">Alguns dos Trabalhos do 1 ti (Ares) feito ao longo do ano.</a></p>
+            </div>
+          </div>
+          <div class="card" >
+            <div class="top">
+              <h2>Segundo Ti</h2>
+            </div>
+            <a href="second.html"><div class="center2"></div></a>
+            <div class="bottom">
+              <p><a id="second" href="second.html">Alguns dos Trabalhos do 2 ti (Kali) feito ao longo do ano.</a></p>
+            </div>
+          </div>
+          <div class="card" >
+            <div class="top">
+              <h2>Terceiro Ti</h2>
+            </div>
+            <a href="third.html"><div class="center3"></div></a>
+            <div class="bottom">
+              <p><a id="third" href="third.html">Alguns dos Trabalhos do 3 ti (Eclipse) feito ao longo do ano.</a></p>
+            </div>
+           </div>
+         
+            <div class="card">
+              <div class="top">
+                <h2>Dia da Conciência Negra</h2>
+              </div>
+              <a href="consience.html"><div class="center4"></div></a>
+              <div class="bottom">
+                <p><a id="consience" href="consience.html">Projetos feitos pela Etec Dr. Rodrigues Geraldo Alckmin sobre o dia da Consiência Negra.</a></p>
+              </div>
+          </div>
+        </div>
+      </section>
+
+
+    </main>
+    <footer id="contato"></footer>
+
+
+    <script>
+      let bg = document.getElementById("bg");
+      let moon = document.getElementById("moon");
+      let mountain = document.getElementById("mountain");
+      let road = document.getElementById("road");
+      let textH2 = document.getElementById("textH2");
+        
+      window.addEventListener('scroll', function(){
+        var value = window.scrollY;
+      
+        bg.style.top = value * 0.5 + 'px';
+        moon.style.left = -value * 1.5 + 'px';
+        mountain.style.top = -value * 0.15 + 'px';
+        road.style.top = value * 0.15 + 'px';
+        textH2.style.top = value * 1 + 'px';
+      })
+    </script>
+
+    <script src="principal/script.js"></script>
+</body>
+</html>

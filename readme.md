@@ -1,0 +1,1 @@
+Este é um projeto feito para um trabalho de portugues que ira se tratar de um jornal digital 

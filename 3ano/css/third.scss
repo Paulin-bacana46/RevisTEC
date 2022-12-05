@@ -1,0 +1,265 @@
+@import 'base';
+
+
+*{
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+}
+body{
+
+  header{
+
+    nav{
+
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+      background: #23232e;
+      height: 8vh;
+
+      .logo{
+        @include a_header();
+        @include a_headerHover();
+
+        font-size: 24px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+
+        span{
+          color: red;
+        }
+      }
+      .mobile-menu{
+
+        display: none;
+        cursor: pointer;
+
+        div{
+          width: 32px;
+          height: 2px;
+          background: #fff; 
+          margin: 8px;
+        }
+      }
+
+      .nav-list{
+
+        list-style: none;
+        align-items: center;
+        display: flex;
+        margin-bottom: 0;
+        
+        li{
+
+          letter-spacing: 3px;
+          margin-left: 32px;
+          transition: .4s;
+
+          a{
+            @include a_header();
+            @include a_headerHover();
+          }
+        }
+
+        li:hover{
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    @media screen and (max-width: 999px) {
+      nav{
+        .mobile-menu{
+          display: block;
+
+        }
+
+        @keyframes navLinkFade {
+          from {
+            opacity: 0;
+            transform: translateX(50px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes animateLine1{
+          0%{
+            transform: translate(0,0) rotate(0);
+          }
+
+          100%{
+            transform: rotate(-45deg) translate(-8px, 8px);
+          }
+        }
+
+        @keyframes animateLine3{
+          0%{
+            transform: translate(0,0) rotate(0);
+          }
+
+          100%{
+            transform: rotate(45deg) translate(-5px, -7px);
+          }
+        }
+
+        .mobile-menu .line1{
+          transition: .5s;
+        }
+        .mobile-menu .line2{
+          transition: .5s;
+        }
+        .mobile-menu .line3{
+          transition: .5s;
+
+        }
+        
+        .mobile-menu.active .line1 {
+          animation: animateLine1 0.5s forwards;
+        }
+        
+        .mobile-menu.active .line2 {
+          opacity: 0;
+        }
+        
+        .mobile-menu.active .line3 {
+          animation: animateLine3 0.5s forwards;
+        }
+
+        }
+
+        .nav-list{
+          position: absolute;
+          top: 8vh;
+          right: 0;
+          width: 50vw;
+          height: 92vh;
+          background: #23232ee5;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around;
+          transform: translateX(100%);
+          transition:  .5s;
+          z-index: 19;
+          
+  
+          li{
+            margin-left: 0;
+            opacity: 1;
+
+            
+          }
+
+  
+        }
+        .nav-list.active{
+          transform: translateX(0);
+          z-index: 20; 
+        }
+      }
+      
+    }
+  }
+
+  main{
+    position: relative;
+
+
+    .container{
+      height: 100vh;
+      width: 100%;
+      
+
+
+      .subContent{
+        @include flex-jusCent-aliCent();
+        width: 100%;
+        height: 100%;
+
+
+        .util{
+          width: 95%;
+          height: 50vh;
+
+
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          background: rgba(0, 0, 0, 0.089);
+
+          .imgBox{
+            height: 50vh;
+            width: 35vw;
+            background: rgb(170, 170, 170);
+
+            img{
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          .textBox{
+            width: 50vw;
+
+            padding: 15px;
+
+            p{
+              color: #fff;
+            }
+          }
+        }
+        .util-R{
+          flex-direction: row-reverse;
+        }
+      }
+    }
+    .container1{
+      background: #0a2a43;
+      z-index: 1;
+
+      #util1{
+        z-index: 2;
+      }
+    }
+    .container2{
+      //background: #0c3250;
+      background: url(../img/ghibli1.jpg) center/cover;
+      z-index: 3;
+      .util2{
+        z-index: 4;
+      }
+    }
+    .container3{
+      background: #0f3e62;
+      z-index: 5;
+
+      .util3{
+        z-index: 6;
+      }
+    }
+    .container4{
+      //background: #124974;
+      background: url(../img/ghibli3.jpg) center/cover;
+      z-index: 7;
+
+      .util4{
+        z-index: 8;
+      }
+    }
+    .container5{
+      background: #196199;
+      z-index: 9;
+
+      .util5{
+        z-index: 10;
+      }
+    }
+  }
